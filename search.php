@@ -1,23 +1,17 @@
+<?php  global $wp_query; ?>
 <?php get_header(); ?>
-<?php
 
-$term = get_queried_object();
-$args = array( 'numberposts' => 10, 'category_name' => $term->slug );
-$posts = get_posts( $args );
-$categories = get_the_category();
+<div class='container mt-3'>
 
-?>
-
-<div class='container mt-5'>
-
-
-  <div class='row'>
-  <?php if ( function_exists('yoast_breadcrumb') ) 
+<?php if ( function_exists('yoast_breadcrumb') ) 
 {yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
-    <?php foreach ($posts as $post) :?>
+  <div class='row'>
+
+       <?php if ( have_posts() ) { ?>
        
-        <div class='col-2'>
-        bhjlllllllllllllllllllllllllllllllllllll
+       <?php while ( have_posts() ) { the_post(); ?>
+		<div class='col-5 col-md-3 col-lg-2 ml-2'>
+        
         <div class="cardn card-category-product">
          
             <div class='wrapper-image' >
@@ -33,13 +27,18 @@ $categories = get_the_category();
         
         <div class="card-body">
           <p class='card-category'><?php echo $categories[0]->cat_name?></p>
-        <a href="<?php echo get_permalink()?>"  class="card-text"><?php echo the_title()?></a>
+        	<a href="<?php echo get_permalink()?>"  class="card-text"><?php echo the_title()?></a>
         </div>
       </div>
       
         </div>
-       
-    <?php  endforeach; ?>
-  </div>
+       <?php } ?>
+      
+       <?php } ?>
+
 </div>
+</div>
+
+         
+
 <?php get_footer(); ?>

@@ -36,64 +36,23 @@
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/library/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/plugin/slick/slick.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.mySlider').slick({
-				dots: true,
-				infinite: true,
-				autoplay: true,
- 				autoplaySpeed: 2000,
-			
-			});
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/script/main.js?v=05112019"></script>
+	<script>
+    $('.flickity-slide').flickity({
+        imagesLoaded: true,
+        groupCells: '100%',
+        dragThreshold: 5,
+        cellAlign: 'left',
+        wrapAround: true,
+        prevNextButtons: true,
+        percentPosition: true,
+        pageDots: false,
+        rightToLeft: false,
+        autoPlay: false
+    });
+    
+    </script>					
 
-			$('.category-slide').slick({
-				speed: 300,
-				slidesToShow: 1,
-				centerMode: true,
-				variableWidth: true,
-				autoplay: false,
-				nextArrow: '<button type="button" class="slide-button next-button"><i class="fas fa-chevron-right"></i></button>',
-				prevArrow: '<button type="button" class="slide-button prev-button"><i class="fas fa-chevron-left"></i></button>',
-  				
-				
-			
-			});
-
-			$('.blog-slide').slick({
-				speed: 300,
-				slidesToShow: 1,
-				centerMode: true,
-				variableWidth: true,
-				nextArrow: '<button type="button" class="slide-button next-button"><i class="fas fa-chevron-right"></i></button>',
-				prevArrow: '<button type="button" class="slide-button prev-button"><i class="fas fa-chevron-left"></i></button>',
-  				
-			
-			});
-
-			$('.galary-products-for').slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: true,
-				asNavFor: '.galary-products-nav',
-				nextArrow: '<button type="button" class="slide-button next-button"><i class="fas fa-chevron-right"></i></button>',
-				prevArrow: '<button type="button" class="slide-button prev-button"><i class="fas fa-chevron-left"></i></button>',
-  				
-			});
-
-			$('.galary-products-nav').slick({
-				slidesToShow: 3,
-				slidesToScroll: 3,
-				infinite: true,
-				asNavFor: '.galary-products-for',
-				centerMode: true,
-				focusOnSelect: true,
-				nextArrow: '<button type="button" class="slide-button next-button"><i class="fas fa-chevron-right"></i></button>',
-				prevArrow: '<button type="button" class="slide-button prev-button"><i class="fas fa-chevron-left"></i></button>',
-  				
-				
-				});
-			});
-  	</script>
 	<?php wp_footer(); ?>
 </body>
 </html>

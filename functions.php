@@ -47,7 +47,7 @@ function menu_item_classes( $classes, $item, $args, $depth ) {
     $classes[] = 'nav-item';
     return $classes;
 }
-add_filter('the_excerpt', 'custom_excerpt');
+
 
 // sub menu class
 class My_Walker_Nav_Menu extends Walker_Nav_Menu {
@@ -58,7 +58,6 @@ class My_Walker_Nav_Menu extends Walker_Nav_Menu {
   }
   add_filter( 'nav_menu_css_class', 'menu_item_classes', 10, 4 );
 
-  add_filter('the_excerpt', 'custom_excerpt');
 
 
 function wp_get_menu_array($current_menu) {
@@ -173,6 +172,29 @@ function custom_shortcode() {
 
 }
 add_shortcode( '', 'custom_shortcode' );
+
+
+function template_chooser($template)   
+{    
+  global $wp_query; 
+  $post_type = $wp_query->query_vars["pagename"];   
+  if( isset($_GET['s']) && $post_type == 'product' )   
+  {
+    echo "HALLLO";
+    return locate_template('archive-search.php');  //  redirect to archive-search.php
+  }   
+  return $template;   
+}
+add_filter('template_include', 'template_chooser');
+
+add_filter( 'wpseo_breadcrumb_links', 'single_product_wpseo_breadcrumb_links' );
+function single_product_wpseo_breadcrumb_links( $links ) {
+	//pk_print( sizeof($links) );
+	if( sizeof($links) > 1 && is_single()){
+		array_pop($links);
+	}
+	return $links;
+}
 
 
 

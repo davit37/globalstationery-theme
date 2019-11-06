@@ -20,14 +20,16 @@ $categories = get_the_category();
 
 ?>
 
-<div class='container mt-5'>
+<div class='container mt-3'>
+<?php if ( function_exists('yoast_breadcrumb') ) 
+{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
   <div class='row'>
 
   <?php if( $posts->have_posts() ) : ?>
     <?php while( $posts->have_posts() ) :
         $posts->the_post(); ?>
        
-        <div class='col-2'>
+        <div class='col-5 col-md-3 col-lg-2 ml-2'>
         
         <div class="cardn card-category-product">
          
