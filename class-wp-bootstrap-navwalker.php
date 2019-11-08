@@ -24,6 +24,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 	 * @extends Walker_Nav_Menu
 	 */
 	class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+		private $curItem;
 		/**
 		 * Starts the list before the elements are added.
 		 *
@@ -36,6 +37,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 		 * @param stdClass $args   An object of wp_nav_menu() arguments.
 		 */
 		public function start_lvl( &$output, $depth = 0, $args = array() ) {
+			
 			if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
 				$t = '';
 				$n = '';
@@ -305,11 +307,12 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 		public static function fallback( $args ) {
 			if ( current_user_can( 'edit_theme_options' ) ) {
 				/* Get Arguments. */
-				$container       = $args['container'];
-				$container_id    = $args['container_id'];
-				$container_class = $args['container_class'];
-				$menu_class      = $args['menu_class'];
-				$menu_id         = $args['menu_id'];
+				$container       	= $args['container'];
+				$container_id    	= $args['container_id'];
+				$container_class 	= $args['container_class'];
+				$menu_class      	= $args['menu_class'];
+				$menu_id        	= $args['menu_id'];
+				
 				// initialize var to store fallback html.
 				$fallback_output = '';
 				if ( $container ) {
@@ -340,6 +343,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 					return $fallback_output;
 				}
 			}
+
 		}
 		/**
 		 * Find any custom linkmod or icon classes and store in their holder
