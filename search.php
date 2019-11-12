@@ -12,7 +12,7 @@
        <?php while ( have_posts() ) { the_post(); ?>
 		<div class='col-5 col-md-3 col-lg-2 ml-2'>
         
-        <div class="cardn card-category-product">
+        <div class="card-category-product">
          
             <div class='wrapper-image' >
              <a href="<?php echo get_permalink()?>">
