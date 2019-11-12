@@ -55,7 +55,7 @@ $categories = get_the_category();
     <?php  endwhile; ?>
     <?php
       else :
-        esc_html_e( 'No testimonials in the diving taxonomy!', 'text-domain' );
+        esc_html_e( "The category doesn't have product ", 'text-domain' );
       endif;
       ?>
   </div>

@@ -3,13 +3,21 @@ Theme Name: Global Stationery Indonesia
 Author: davit hermansyah
 */
 html {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  height: 100%;
+  min-height: 100%; }
   html.menu-open {
     overflow: hidden;
     margin-right: 17px;
     height: 100%;
     margin: 0;
     width: 100%; }
+
+button:focus {
+  outline: unset; }
 
 body {
   font-family: sans-serif;
@@ -20,6 +28,7 @@ body {
   padding-right: 0 !important;
   display: block;
   min-height: 100vh;
+  height: 100%;
   color: #777;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -105,26 +114,24 @@ a.lead {
 .top-nav-wrapper {
   background: #74000c;
   height: 30px; }
-  .top-nav-wrapper .collapse {
-    margin-right: 114px; }
-    .top-nav-wrapper .collapse ul li {
-      padding: 5px; }
-      .top-nav-wrapper .collapse ul li a {
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.8);
-        padding: 0 0 !important; }
-        .top-nav-wrapper .collapse ul li a:hover {
-          text-decoration: none;
-          color: white; }
-      .top-nav-wrapper .collapse ul li + li a::before {
-        content: "";
-        top: 50%;
-        width: 1px;
-        border-left: 1px solid rgba(158, 156, 156, 0.3490196078);
-        height: 15px;
-        margin-top: -7px;
-        left: -1em;
-        margin-right: 10px; }
+  .top-nav-wrapper .collapse ul li {
+    padding: 5px; }
+    .top-nav-wrapper .collapse ul li a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 0 0 !important; }
+      .top-nav-wrapper .collapse ul li a:hover {
+        text-decoration: none;
+        color: white; }
+    .top-nav-wrapper .collapse ul li + li a::before {
+      content: "";
+      top: 50%;
+      width: 1px;
+      border-left: 1px solid rgba(158, 156, 156, 0.3490196078);
+      height: 15px;
+      margin-top: -7px;
+      left: -1em;
+      margin-right: 10px; }
 
 .header-main {
   height: 90px;
@@ -187,7 +194,7 @@ header .stuck {
     margin: 0;
     padding: 0;
     position: relative;
-    margin: 0 7px;
+    margin: 0;
     transition: background-color .3s;
     font-size: .85em; }
     .header-nav li .search-field {
@@ -204,6 +211,15 @@ header .stuck {
       color: #333;
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
       transition: color .3s, border .3s, background .3s, opacity .3s; }
+
+#main-slider .box-slider {
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+#main-slider, .flickity-viewport, .flickity-slider, .box-slider {
+  height: 100%; }
 
 .button {
   position: relative;
@@ -295,7 +311,7 @@ header .stuck {
     .navbar-bottom .dropdown-menu .nav-item {
       padding: 0 20px; }
       .navbar-bottom .dropdown-menu .nav-item .dropdown-item {
-        color: rgba(102, 102, 102, 0.85);
+        color: #4b4b4b;
         transition: all .2s;
         text-transform: capitalize;
         font-weight: normal;
@@ -321,14 +337,8 @@ header .stuck {
       border-bottom: 13px solid transparent;
       border-right: 26px solid #58595b; }
 
-.container-slide {
-  width: 100%;
-  overflow: hidden; }
-  .container-slide .mySlider {
-    margin-top: 0px;
-    overflow: hidden;
-    height: 500px;
-    box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.8); }
+.dropdown-item {
+  color: #707880; }
 
 .category-slide a {
   color: #4b4b4b !important; }
@@ -706,8 +716,8 @@ p.blog-description {
       height: 100%;
       width: auto; }
 
-.main-menu {
-  max-width: 1080px; }
+.menu-item:first-child .nav-link {
+  padding-left: 0 !important; }
 
 .sidebar {
   padding: 0 30px; }
@@ -836,7 +846,7 @@ p.blog-description {
   .mobile-menu-wrapper .mobile-menu-container {
     background-color: rgba(255, 255, 255, 0.95);
     cursor: default;
-    overflow: hidden;
+    overflow-y: scroll;
     min-width: 280px;
     max-width: 75%;
     position: relative;
@@ -846,27 +856,48 @@ p.blog-description {
     .mobile-menu-wrapper .mobile-menu-container .wrapper-menu {
       padding-left: 0;
       padding-top: 20px; }
+    .mobile-menu-wrapper .mobile-menu-container .nav-link:hover {
+      color: black; }
     .mobile-menu-wrapper .mobile-menu-container .search-mobile-wrapper ul .search-form {
       margin-left: 20px; }
     .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile {
       margin-top: 15px;
-      text-transform: uppercase; }
-      .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile .navbar-nav li.menu-item {
-        width: 100%;
-        margin: 0;
-        padding: 3px 20px;
-        border-top: 0.7px solid rgba(102, 102, 102, 0.18);
-        font-size: 14px;
-        transition: background-color 1s; }
-        .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile .navbar-nav li.menu-item:hover {
-          background-color: rgba(102, 102, 102, 0.18); }
-      .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile .navbar-nav .dropdown-menu {
-        position: inherit;
-        opacity: 1;
-        left: auto;
-        padding-bottom: 30px;
-        transform: translateX(0);
-        list-style: none; }
+      text-transform: uppercase;
+      padding: 0; }
+      .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile .navbar-nav {
+        width: 100%; }
+        .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile .navbar-nav li.menu-item {
+          width: 100%;
+          margin: 0;
+          padding: 3px 20px;
+          border-top: 0.7px solid rgba(102, 102, 102, 0.18);
+          font-size: 14px;
+          transition: background-color 1s; }
+          .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile .navbar-nav li.menu-item:hover {
+            background-color: rgba(102, 102, 102, 0.18); }
+        .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile .navbar-nav .mobile-dropdown {
+          position: fixed;
+          opacity: 0;
+          left: -99999px;
+          padding-left: 5px;
+          transform: translateX(10);
+          list-style: none; }
+          .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile .navbar-nav .mobile-dropdown.active {
+            position: inherit;
+            opacity: 1;
+            left: auto;
+            padding-bottom: 30px;
+            -ms-transform: translateX(0);
+            transform: translateX(0); }
+          .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile .navbar-nav .mobile-dropdown li {
+            border: unset;
+            padding: 5px 3px; }
+            .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile .navbar-nav .mobile-dropdown li:hover {
+              background-color: unset; }
+            .mobile-menu-wrapper .mobile-menu-container #menubar-items-mobile .navbar-nav .mobile-dropdown li .dropdown-item {
+              background-color: unset;
+              text-transform: capitalize;
+              padding: 0; }
 
 .slick-dots {
   height: 90px; }
@@ -978,7 +1009,10 @@ p.blog-description {
 
   .carousel-cell {
     padding: 0 4px; } }
-@media (max-width: 845px) {
+@media (max-width: 991px) {
+  header {
+    border-bottom: 1px solid rgba(241, 240, 240, 0.877); }
+
   .navbar-bottom {
     display: none; }
 
@@ -998,9 +1032,6 @@ p.blog-description {
       max-width: 100%;
       margin: 0; }
 
-  .container-slide .mySlider {
-    height: 400px; }
-
   .slide-button.next-button {
     right: -15px; }
   .slide-button.prev-button {
@@ -1012,8 +1043,5 @@ p.blog-description {
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
-@media (min-width: 320px) and (max-width: 480px) {
-  .container-slide .mySlider {
-    height: auto; } }
 
 /*# sourceMappingURL=style.css.map */

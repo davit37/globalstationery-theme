@@ -1,23 +1,12 @@
 <?php get_header(); ?>
 
-<?php $images = getSlider(); ?>
+
 
 <?php 
 
 // echo "<pre>";print_r($images); echo"</pre>";?>
 
-<div class='container-slide'>
-	<div class="mySlider">
-		<?php 
-			foreach($images as $key=>$url){
-			
-				
-				echo "<img src='$url' />";
-				
-			}
-		?>
-	</div>
-</div>
+
 
  <div class='section'>
 	<div class='container container-slider '>
@@ -31,7 +20,7 @@
 
 		<div class='row mt-4'>
 			
-			<div class='col-12'>
+			<div class='col-12  pl-0 pr-0'>
 				<div class='flickity-slide'  data-flickity-options="" tabindex="0">
 				
 				
@@ -112,7 +101,7 @@
 
 		<div class='row mt-4'>
 			
-			<div class='col-12'>
+			<div class='col-12 pl-0 pr-0'>
 				<div class='blog-slide '  >
 					<?php
 						$args = array('post_type'=> 'blog', );
