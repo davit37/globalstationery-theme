@@ -704,8 +704,10 @@ header{
     padding: 10px 0 15px;
     font-size: .9em;
     color: #666666;
+  
 
     ul {
+        flex-direction: row;
         opacity: .8;
         border-bottom: 1px solid rgba(221, 221, 221, 0.10196078431372549);
     }
@@ -1525,6 +1527,12 @@ p.blog-description {
 
     .banner-bg {
         background-attachment: initial !important;
+    }
+
+    .footer-dark{
+        .container{
+            max-width: 100%;
+        }
     }
 
 }

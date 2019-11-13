@@ -1,32 +1,34 @@
 	</div>
 
 	<div class="footer-dark ">
-		<div class='container'>
-	
-			<nav class="navbar navbar-expand-md navbar-footer p-0" role="navigation">
-				
-				<!-- Brand and toggle get grouped for better mobile display -->
-			
-				
-					<?php
-					wp_nav_menu( array(
-						'menu'              =>'footer-menu',
-						'depth'             => 2,
-						'container'         => 'div',
-						'container_class'   => 'collapse navbar-collapse',
-						'container_id'      => 'bs-example-navbar-collapse-1',
-						'menu_class'        => 'nav navbar-nav',
-						'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-						'walker'            => new WP_Bootstrap_Navwalker(),
-					) );
-					?>
-				
-			</nav>
-			<div class="copyright-footer p-0">
-				
-				<p>Copyright 2019 © <strong>Global Stationery Indonesia</strong>. </p>
+		<div class='container '>
+			<div class=''>
+		
+				<nav id='footer-navbar' class="navbar navbar-expand-md navbar-footer p-0 justify-content-sm-center justify-content-md-center justify-content-lg-start" role="navigation">
+					
+					<!-- Brand and toggle get grouped for better mobile display -->
 				
 					
+						<?php
+						wp_nav_menu( array(
+							'menu'              =>'footer-menu',
+							'depth'             => 2,
+							'container'         => 'div',
+							'container_class'   => ' ',
+							'container_id'      => '',
+							'menu_class'        => 'nav navbar-nav justify-content-center ',
+							'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+							'walker'            => new WP_Bootstrap_Navwalker(),
+						) );
+						?>
+					
+				</nav>
+				<div class="copyright-footer p-0  ">
+					
+					<p class='text-center text-lg-left text-md-center'>Copyright 2019 © <strong>Global Stationery Indonesia</strong>. </p>
+					
+						
+				</div>
 			</div>
 		</div>
 	

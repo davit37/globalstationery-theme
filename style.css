@@ -492,6 +492,7 @@ header .stuck {
   font-size: .9em;
   color: #666666; }
   .footer-dark ul {
+    flex-direction: row;
     opacity: .8;
     border-bottom: 1px solid rgba(221, 221, 221, 0.1019607843); }
   .footer-dark li:not(:first-child) {
@@ -1038,7 +1039,10 @@ p.blog-description {
     left: -15px; }
 
   .banner-bg {
-    background-attachment: initial !important; } }
+    background-attachment: initial !important; }
+
+  .footer-dark .container {
+    max-width: 100%; } }
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
