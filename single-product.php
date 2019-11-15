@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class='container mt-3'>
+<div class='container mt-3 mb-5'>
     <div class='row justify-content-center'>
        
         <?php
@@ -15,26 +15,33 @@
 
             ?>
                 <div class='col-10 col-md-12 col-lg-5 mr-3'>
-                    <div class='slide-product'>
-                            <div class='galary-products-for'>
+                    
+                            <div class='product-main position-relative mb-2'>
                                 <?php foreach($tours->field('add_image') as $image) : ?>
-                                    <div class='wrapper-image'>
-                                        <img src='<?= $image['guid']?>'>
+                                    <div class='wrapper-image easyzoom text-center'>
+
+                                        
+                                            <a href="<?= $image['guid']?>">
+                                            <img src='<?= $image['guid']?>'>
+                                            </a>
+                                            
+                                        
+                                        
                                     </div>
                                     
                                 <?php endforeach; ?>
                             </div>
 
-                            <div class='galary-products-nav'>
+                            <div class='products-nav mb-4'>
                                 <?php foreach($tours->field('add_image') as $image) : ?>
                                 
-                                    <div class=''>
+                                    <div class='col'>
                                         <img src='<?= $image['guid']?>'>
                                     </div>
                                 
                                 <?php endforeach; ?>
                             </div>
-                    </div>
+                
                 </div>
 
                 <div class='col-10 col-md-10 col-lg-4'>

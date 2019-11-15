@@ -4,14 +4,6 @@
 	<title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/plugin/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/plugin/slick/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/plugin/flickity/flickity.min.css">
-   
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css?v=08112019">
-    <script defer src="<?php bloginfo('template_url'); ?>/plugin/fontawesome/js/all.js"></script> 
-    
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="60x60" href="<?php bloginfo('template_url'); ?>/images/favicon/apple-icon-60x60.png">
@@ -32,6 +24,18 @@
     <meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- End Favicon -->
+
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/plugin/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/plugin/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/plugin/flickity/flickity.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css?v=08112019">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/plugin/easyzoom/css/easyzoom.css">
+    <script defer src="<?php bloginfo('template_url'); ?>/plugin/fontawesome/js/all.js"></script> 
+    
+
+
 
 	<?php wp_head(); ?>
 </head>

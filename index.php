@@ -21,7 +21,7 @@
 		<div class='row mt-4'>
 			
 			<div class='col-12  pl-0 pr-0'>
-				<div class='flickity-slide'  data-flickity-options="" tabindex="0">
+				<div class='category-slide'  data-flickity-options="" tabindex="0">
 				
 				
 					<?php foreach (get_terms('product-category', array('hide_empty'=> false, 'parent'=>0)) as $cat) :?>

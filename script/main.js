@@ -12,7 +12,7 @@ $(document).ready(function () {
     setGallerySize: false
   })
 
-  $('.flickity-slide').flickity({
+  $('.category-slide').flickity({
     imagesLoaded: true,
     groupCells: '100%',
     dragThreshold: 5,
@@ -39,6 +39,38 @@ $(document).ready(function () {
   });
 
 
+  //slider single product
+
+  
+  $('.product-main').flickity({
+    cellAlign: "center",
+    wrapAround: true,
+    autoPlay: false,
+    prevNextButtons:true,
+    adaptiveHeight: true,
+    imagesLoaded: true,
+    lazyLoad: 1,
+    dragThreshold : 15,
+    pageDots: false,
+    rightToLeft: false       
+
+  });
+  
+  $('.products-nav').flickity({
+    
+      cellAlign: "left",
+      wrapAround: true,
+      autoPlay: false,
+      prevNextButtons: true,
+      asNavFor: ".product-main",
+      percentPosition: true,
+      imagesLoaded: true,
+      pageDots: false,
+      rightToLeft: false,
+      contain: true
+  
+  });
+
   $('.galary-products-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -61,6 +93,11 @@ $(document).ready(function () {
 
 
   });
+
+  var $easyzoom = $('.easyzoom').easyZoom();
+
+  // Get an instance API
+  var api = $easyzoom.data('easyZoom');
 
 
   //end slider

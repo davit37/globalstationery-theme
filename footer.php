@@ -38,7 +38,9 @@
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/library/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/plugin/slick/slick.min.js"></script>
-	<script  src="<?php bloginfo('template_url'); ?>/plugin/flickity/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/plugin/flickity/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/plugin/easyzoom/js/easyzoom.js"></script>
+
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/script/main.js?v=08112019"></script>
 				
 
