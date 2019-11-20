@@ -14,7 +14,7 @@
         
         <div class="card-category-product">
          
-            <div class='wrapper-image' >
+            <div class='wrapper-image p-3' >
              <a href="<?php echo get_permalink()?>">
               <img src='<?php echo  get_the_post_thumbnail_url(); ?>' style="width:100%; height:100%; object-fit:cover">
               </a>

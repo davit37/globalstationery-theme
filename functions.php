@@ -207,3 +207,28 @@ function single_product_wpseo_breadcrumb_links( $links ) {
 
 
 
+/*-------------------------------------------------------------------
+Bootstrap WordPress Pagination Using WP-Pagenavi
+-------------------------------------------------------------------*/
+
+//attach our function to the wp_pagenavi filter
+function wiaw_pagenavi_to_bootstrap($html) {
+  
+  $out = '';
+  $out = str_replace('<div','',$html);
+  $out = str_replace('class=\'wp-pagenavi\' role=\'navigation\'>','',$out);
+  $out = str_replace('<a','<li class="page-item"><a class="page-link"',$out);
+  $out = str_replace('</a>','</a></li>',$out);
+  $out = str_replace('<span aria-current=\'page\' class=\'current\'','<li aria-current="page" class="page-item active"><span class="page-link current"',$out);
+  $out = str_replace('<span class=\'pages\'','<li class="page-item"><span class="page-link pages"',$out);
+  $out = str_replace('<span class=\'extend\'','<li class="page-item"><span class="page-link extend"',$out);  
+  $out = str_replace('</span>','</span></li>',$out);
+  $out = str_replace('</div>','',$out);
+  return '<ul class="pagination" role="navigation">'.$out.'</ul>';
+}
+add_filter( 'wp_pagenavi', 'wiaw_pagenavi_to_bootstrap', 10, 2 );
+/*-------------------------------------------------------------------
+Bootstrap WordPress Pagination Using WP-Pagenavi
+-------------------------------------------------------------------*/
+
+

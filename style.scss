@@ -126,7 +126,7 @@ a.lead {
 
 .main {
     position: relative;
-    min-height: 500px;
+    min-height: 100vh;
 }
 
 .flex-row {
@@ -1471,6 +1471,28 @@ p.blog-description {
     }
 
    
+}
+
+
+//product pagination
+#product-pagination{
+    .page-link{
+        color:$c-red-dark;
+
+        &:hover{
+            color: $c-red-dark;
+        }
+
+        &.current{
+            background-color:$c-red-dark;
+            color: white;
+            border-color: $c-red-dark;
+        }
+
+        &:focus{
+            box-shadow:unset;
+        }
+    }
 }
 
 @media screen and (min-width: 550px) and (max-width:849px) {
