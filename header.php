@@ -171,6 +171,17 @@
                             
                         }
                     ?>
+
+
+                   
+                
+
+                    </a>
+                </div>
+                <div class='text-center'>
+                    <a href='#future-product' id='scroll-down'>
+                    <i class="fas fa-chevron-down"></i>
+                    </a>
                 </div>
             </div>
         </div>

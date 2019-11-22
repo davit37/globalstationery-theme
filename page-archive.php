@@ -1,6 +1,12 @@
+<?php
+/* 
+Template Name: Archives
+*/
+?>
+
 <?php get_header(); ?>
 <?php
-$paged = get_query_var('paged') ? get_query_var('paged') : 1;
+$paged = get_query_var('page') ? get_query_var('page') : 1;
 $term = get_queried_object();
 $args = array(
         'post_type'   => 'product',

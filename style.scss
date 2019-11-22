@@ -208,7 +208,7 @@ a.lead {
 
 
     .logo {
-        width: 166px;
+        width: 326px;
         display: inline-block;
         margin-right: 30px;
 
@@ -227,7 +227,7 @@ header {
         animation: stuckMoveDown 1s;
 
         .header-main {
-            height: 71px;
+            height: 80px;
         }
     }
 }
@@ -320,6 +320,29 @@ header {
     height: 100%;
 }
 
+//button scrolldown
+#scroll-down{
+    text-align: center;
+    color: #1a1a1a;
+    transition: all 0.1s ease;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -15px;
+    border-radius: 30px;
+    border: 2px solid  rgba(255, 255, 255, 0.58);
+    transition: all 0.2s ease;
+    z-index: 20;
+    color: white;
+    padding: 3px;
+
+    &:hover{
+        border-color: rgba(255, 255, 255, 1);
+    }
+}
 
 
 .button {
@@ -709,7 +732,7 @@ header {
     background-color: #000000;
     padding: 10px 0 15px;
     font-size: .9em;
-    color: #666666;
+    color: #969696;
 
 
     ul {
@@ -728,13 +751,13 @@ header {
 
         a.nav-link {
             text-transform: uppercase;
-            color: #666666;
+            color: #bcbcbc;
             font-weight: bold;
             font-size: 12px;
             padding: 0 !important;
 
             &:hover {
-                color: #bcbcbc;
+                color: white;
             }
 
 
@@ -926,16 +949,18 @@ header {
     position: relative;
     width: 100%;
     font-size: .9em;
+    padding-left: 15px;
+    padding-right: 15px;
 
-    &.text-center {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+ 
 
     h5 {
         line-height: 1.3;
         margin-top: .1em;
-        margin-bottom: .1em;
+        margin-bottom: .5em;
+        max-height: 2.5em;
+        height: 2.5em;
+        overflow: hidden;
     }
 
     p {
@@ -1431,6 +1456,30 @@ p.blog-description {
     flex-basis: 50%;
 }
 
+.flickity-page-dots {
+    position: absolute;
+    width: 100%;
+    bottom: 110px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    line-height: 1;
+    height: 10px;
+
+    .dot{
+        width: 15px;
+        height: 15px;
+        border: 1.5px solid #fff;
+        opacity: .7;
+        background-color: unset;
+        &.is-selected{
+           
+            background: #8c0412;
+        }
+    }
+}
+
 .blog-slide {
     .flickity-slider>.col {
         max-width: 100%;
@@ -1495,6 +1544,8 @@ p.blog-description {
     }
 }
 
+
+//Tablet
 @media screen and (min-width: 550px) and (max-width:849px) {
     .flickity-slider>.col {
         max-width: 33.33333%;
@@ -1531,9 +1582,19 @@ p.blog-description {
         display: none;
     }
 
+    .header-main{
+        
+        .logo {
+            width: 275px;
+            margin: 0 auto;
+        }
+    }
+
     
 }
 
+
+//mobile
 @media screen and (max-width: 549px) {
 
     .easyzoom-flyout {
@@ -1570,9 +1631,15 @@ p.blog-description {
     .carousel-cell {
         padding: 0 4px;
     }
+
+    .header-main{
+        .logo{
+            width: 200px;
+        }
+    }
 }
 
-
+//tablet and mobile
 @media (max-width: 991px) {
 
     header {
@@ -1595,10 +1662,9 @@ p.blog-description {
 
 
 
-        .logo {
+        .logo{
             margin: 0 auto;
         }
-
         .main-nav {
             display: none;
         }
@@ -1636,9 +1702,3 @@ p.blog-description {
 
 }
 
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {}

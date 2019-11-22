@@ -20,9 +20,9 @@
                                 <?php foreach($tours->field('add_image') as $image) : ?>
                                     <div class='wrapper-image easyzoom text-center'>
 
-                                        
-                                            <a href="<?= $image['guid']?>">
-                                            <img src='<?= $image['guid']?>'>
+                                       
+                                            <a href="<?php echo pods_image_url($image,'')?>">
+                                            <?php echo pods_image( $image, '' );?>
                                             </a>
                                             
                                     </div>

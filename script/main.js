@@ -157,4 +157,14 @@ $(document).ready(function () {
   });
 
 
+  //scroll down
+  $("#scroll-down").click(function(e) {
+    e.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $(".section").offset().top-($( window ).height()/5)
+    }, 500);
+  });
+
+
 })

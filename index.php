@@ -1,19 +1,28 @@
 <?php get_header(); ?>
 
+<?php
+
+$args = array(
+	'post_type'       => 'product',
+	'post_status'     => 'publish',
+	'orderby'   => 'rand',
+	
+   
+);
+$products = new WP_Query( $args );
+
+?>
 
 
-<?php 
-
-// echo "<pre>";print_r($images); echo"</pre>";?>
 
 
 
  <div class='section'>
-	<div class='container container-slider '>
+	<div class='container container-slider ' >
 
 		<h5 class='section-title'>
 			<b></b>  
-				<span class='section-title-main'>product by category</span>
+				<span class='section-title-main'>future products</span>
 			<b></b>
 		</h5>
 
@@ -23,25 +32,28 @@
 			<div class='col-12  pl-0 pr-0'>
 				<div class='category-slide'  data-flickity-options="" tabindex="0">
 				
+
+				<?php if($products->have_posts()) :?>
+
 				
-					<?php foreach (get_terms('product-category', array('hide_empty'=> false, 'parent'=>0)) as $cat) :?>
+					 <?php while( $products->have_posts() ) :  $products->the_post(); ?>
 					
 					<div class="carousel-cell col">
 						<div class='col-inner'>
-							<a href="<?php echo get_term_link($cat->term_id); ?>">
+							<a href="<?php echo get_permalink()?>">
 
 								<div class='box box-content'>
 										<div class='box-image'>
 											<div class='image-cover'>
-											<img src="<?php echo z_taxonomy_image_url($cat->term_id); ?>" class="slider-img" alt="...">
+											<img src="<?php echo  get_the_post_thumbnail_url(); ?>" class="slider-img" alt="...">
 
 											</div>
 
 										</div>
-										<div class="box-text text-center">
+										<div class="box-text ">
 											<div class='box-text-inner'>
-												<h5 class='font-weight-bold text-uppercase'><?php echo $cat->name; ?></h5>
-												<p class='is-xsmall text-uppercase text-center'><?php echo wp_trim_words( $cat->description, 4, '..' ) ?></p>
+												<h5 class=''><?php echo wp_trim_words(the_title(), 4, '..' )?></h5>
+												<p class='is-xsmall text-uppercase '><?php echo wp_trim_words( "Lorem ipsum dolor sit amet, eos ne blandit e", 4, '..' ) ?></p>
 
 											</div>
 										</div>
@@ -53,8 +65,9 @@
 						</div>
 					</div>
 					
-					<?php  endforeach; ?>
+				<?php  endwhile; ?>
 
+				<?php endif;?>
 				</div>
 
 			</div>

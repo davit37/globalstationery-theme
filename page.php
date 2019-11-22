@@ -5,16 +5,17 @@
     <div class='row justify-content-center'>
         <div class='col-10'>
 
-        <h4>
-            <strong>
-                <?php the_title() ?>
-            </strong>
-        </h4>
+            <h4>
+                <strong>
+                    <?php the_title() ?>
+                </strong>
+            </h4>
 
-        <?php
-            the_content(); ?>
+            <?php
+                the_content(); ?>
 
         </div>
+    </div>
 
    <?php     
     endwhile; 
