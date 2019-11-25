@@ -3,20 +3,13 @@
 <?php
 
 $args = array(
-	'post_type'       => 'product',
-	'post_status'     => 'publish',
-	'orderby'   => 'rand',
-	
-   
+	'post_type'     => 'product',
+	'post_status'   => 'publish',
+	'orderby'   	=> 'rand', 
 );
 $products = new WP_Query( $args );
 
 ?>
-
-
-
-
-
  <div class='section'>
 	<div class='container container-slider ' >
 
@@ -89,7 +82,7 @@ $products = new WP_Query( $args );
 						<h3 class="uppercase" ><strong>RETAIL OR WHOLESALE?</strong></h3>
 						<p class="lead text-center">We have great offers available!<br>Please contact us with your enquiries</p>
 
-						<a href="/contact-us" class="btn  button-transparent" role="button" aria-pressed="true">Get in Touch</a>
+						<a href="contact-us" class="btn  button-transparent" role="button" aria-pressed="true">Get in Touch</a>
 					</div>
 
 				</div>
@@ -97,10 +90,6 @@ $products = new WP_Query( $args );
 		</div>
 
 	</div>
-
-
-
-
 	<div class='container mt-3'>
 
 		<h5 class='section-title'>

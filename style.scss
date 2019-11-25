@@ -329,7 +329,7 @@ header {
     width: 30px;
     height: 30px;
     position: absolute;
-    bottom: 30px;
+    bottom: 60px;
     left: 50%;
     margin-left: -15px;
     border-radius: 30px;
@@ -1156,7 +1156,7 @@ p.blog-description {
         width: 23px;
         height: 2px;
         position: absolute;
-        vertical-align: bottom;
+        
         background: $c-red-dark;
         white-space: nowrap;
         transition: all ease .3s;
@@ -1459,7 +1459,7 @@ p.blog-description {
 .flickity-page-dots {
     position: absolute;
     width: 100%;
-    bottom: 110px;
+    bottom: 140px;
     padding: 0;
     margin: 0;
     list-style: none;
